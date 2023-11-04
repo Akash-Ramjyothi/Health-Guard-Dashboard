@@ -1,0 +1,107 @@
+.table-container {
+  background-color: #f0ffff;
+  width: 90%;
+}
+
+table {
+  width: 100%;
+}
+
+.tbl-header {
+  background-color: #89cff0;
+}
+
+th {
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 16px;
+  color: #414141;
+  text-transform: uppercase;
+}
+
+.headings-table {
+  border-collapse: collapse; /* This is equivalent to cellpadding="0" and cellspacing="0" in HTML */
+  border: 0;
+}
+
+.user-table {
+  border-collapse: collapse; /* This is equivalent to cellpadding="0" and cellspacing="0" in HTML */
+  border: 0;
+}
+
+.tbl-content {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+td {
+  padding: 10px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 500;
+  font-size: 16px;
+  color: #414141;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+}
+
+.image--cover {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center right;
+  margin-right: 10px;
+}
+
+.name-cell {
+  display: flex;
+  align-items: center;
+}
+
+.status-chip {
+  display: flex;
+  justify-content: center;
+  background-color: #90ee90;
+  width: 70px;
+  padding-right: 6px;
+  padding-left: 6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 10px;
+  color: #023020;
+}
+
+.table-heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.users-chip {
+  display: flex;
+  justify-content: center;
+  background-color: #ffd580;
+  width: 90px;
+  color: #804600;
+  border-radius: 10px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.table-title {
+  display: flex;
+  color: #414141;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.table-description {
+  display: flex;
+  color: #414141;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
