@@ -48,30 +48,21 @@ function Dashboard() {
     onValue(dbRef, (snapshot) => {
       if (snapshot.exists()) {
         const resultData = snapshot.val();
-        console.log("resultData: ", resultData);
-
         const resultDataKeys = Object.keys(resultData);
-        console.log("resultDataKeys: ", resultDataKeys);
 
         if (resultDataKeys.length > 0) {
           const lastKey = resultDataKeys[resultDataKeys.length - 1];
           const lastChild = resultData[lastKey];
 
-          if (lastChild) {
-            const lastChildKeys = Object.keys(lastChild);
-            console.log("lastChildKeys: ", lastChildKeys);
+          const lastChildKeys = Object.keys(lastChild);
 
-            if (lastChildKeys.length > 0) {
-              const lastNode =
-                lastChild[lastChildKeys[lastChildKeys.length - 1]];
-              console.log("Last Node: ", lastNode);
+          if (lastChildKeys.length > 0) {
+            const lastNode = lastChild[lastChildKeys[lastChildKeys.length - 1]];
 
-              // Now you can access properties of the last node
-              if (lastNode && lastNode.heartRate) {
-                const lastHeartRate = lastNode.heartRate;
-                console.log("Last Heart Rate: ", lastHeartRate);
-                setRealtimeDatabaseData(lastHeartRate);
-              }
+            if (lastNode && lastNode.heartRate) {
+              const lastHeartRate = lastNode.heartRate;
+              console.log("Last Heart Rate: ", lastHeartRate);
+              setRealtimeDatabaseData(lastHeartRate);
             }
           }
         }
