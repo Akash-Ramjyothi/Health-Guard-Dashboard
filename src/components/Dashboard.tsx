@@ -114,7 +114,21 @@ function Dashboard() {
                 <td>+91 8939928002</td>
                 <td>
                   <div className="chips">
-                    <div className="status-chip">Normal</div>
+                    {realtimeDatabaseData !== null ? (
+                      realtimeDatabaseData == 0 ? (
+                        <div className="status-chip-disconnected">
+                          Disconnected
+                        </div>
+                      ) : realtimeDatabaseData < 60 ? (
+                        <div className="status-chip-low">Low BP</div>
+                      ) : realtimeDatabaseData > 100 ? (
+                        <div className="status-chip-high">High BP</div>
+                      ) : (
+                        <div className="status-chip-normal">Normal</div>
+                      )
+                    ) : (
+                      <div>Loading...</div>
+                    )}
                   </div>
                 </td>
                 <td>{realtimeDatabaseData}</td>
@@ -136,10 +150,10 @@ function Dashboard() {
                 <td>+91 6201991586</td>
                 <td>
                   <div className="chips">
-                    <div className="status-chip">High BP</div>
+                    <div className="status-chip-normal">Normal</div>
                   </div>
                 </td>
-                <td>22</td>
+                <td>82</td>
                 <td>
                   <InfoTwoToneIcon />
                 </td>

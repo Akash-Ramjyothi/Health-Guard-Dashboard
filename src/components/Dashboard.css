@@ -61,7 +61,7 @@ td {
   align-items: center;
 }
 
-.status-chip {
+.status-chip-normal {
   display: flex;
   justify-content: center;
   background-color: #90ee90;
@@ -72,6 +72,45 @@ td {
   padding-bottom: 3px;
   border-radius: 10px;
   color: #023020;
+}
+
+.status-chip-high {
+  display: flex;
+  justify-content: center;
+  background-color: #f77676;
+  width: 70px;
+  padding-right: 6px;
+  padding-left: 6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 10px;
+  color: #850606;
+}
+
+.status-chip-low {
+  display: flex;
+  justify-content: center;
+  background-color: #b19cd9;
+  width: 70px;
+  padding-right: 6px;
+  padding-left: 6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 10px;
+  color: #3d003d;
+}
+
+.status-chip-disconnected {
+  display: flex;
+  justify-content: center;
+  background-color: #ffff00;
+  width: 70px;
+  padding-right: 6px;
+  padding-left: 6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 10px;
+  color: #3d003d;
 }
 
 .table-heading {
