@@ -1,3 +1,8 @@
+.App {
+  background-color: #f0ffff !important;
+  width: 100% !important;
+}
+
 .table-container {
   background-color: #f0ffff;
   width: 90%;
@@ -91,19 +96,6 @@ td {
   display: flex;
   justify-content: center;
   background-color: #b19cd9;
-  width: 70px;
-  padding-right: 6px;
-  padding-left: 6px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  border-radius: 10px;
-  color: #3d003d;
-}
-
-.status-chip-disconnected {
-  display: flex;
-  justify-content: center;
-  background-color: #ffff00;
   width: 70px;
   padding-right: 6px;
   padding-left: 6px;

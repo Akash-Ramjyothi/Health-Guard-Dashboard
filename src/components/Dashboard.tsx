@@ -80,7 +80,7 @@ function Dashboard() {
           <div className="table-title">Monitor Users</div>
           <div className="users-chip">
             <PersonIcon />
-            <div>2 users</div>
+            <div>4 users</div>
           </div>
           <div className="table-description">
             Monitor all the current registered users in real-time and view more
@@ -148,6 +148,50 @@ function Dashboard() {
                 </td>
                 <td>22 </td>
                 <td>+91 6201991586</td>
+                <td>
+                  <div className="chips">
+                    <div className="status-chip-high">High BP</div>
+                  </div>
+                </td>
+                <td>82</td>
+                <td>
+                  <InfoTwoToneIcon />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div className="name-cell">
+                    <img
+                      src="https://media.licdn.com/dms/image/C5603AQEScHpTbc7SKQ/profile-displayphoto-shrink_800_800/0/1653956825675?e=2147483647&v=beta&t=s1kgm0boF5AnvI_l9oHTm4g0dKeBO1AyyrSF2gpmX98"
+                      className="image--cover"
+                    />
+                    <div>Pinak Bakshi</div>
+                  </div>
+                </td>
+                <td>21 </td>
+                <td>+91 9908289350</td>
+                <td>
+                  <div className="chips">
+                    <div className="status-chip-low">Low BP</div>
+                  </div>
+                </td>
+                <td>82</td>
+                <td>
+                  <InfoTwoToneIcon />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div className="name-cell">
+                    <img
+                      src="https://media.licdn.com/dms/image/D5603AQGWklpV8-Gz9g/profile-displayphoto-shrink_800_800/0/1672944339565?e=2147483647&v=beta&t=8pEJ8NfA38RRr2_VhBC66l6CxkuZmqatonXSOswau_w"
+                      className="image--cover"
+                    />
+                    <div>Jash Gandhi</div>
+                  </div>
+                </td>
+                <td>22 </td>
+                <td>+91 9741258877</td>
                 <td>
                   <div className="chips">
                     <div className="status-chip-normal">Normal</div>
