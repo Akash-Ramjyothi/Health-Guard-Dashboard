@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Heart-Guard-Dashboard/static/css/main.15f92823.css",
+    "main.js": "/Heart-Guard-Dashboard/static/js/main.7797ffa0.js",
+    "static/js/787.fb5b094a.chunk.js": "/Heart-Guard-Dashboard/static/js/787.fb5b094a.chunk.js",
+    "static/media/safety.png": "/Heart-Guard-Dashboard/static/media/safety.72aa1fd56a544b1844dc.png",
+    "index.html": "/Heart-Guard-Dashboard/index.html",
+    "main.15f92823.css.map": "/Heart-Guard-Dashboard/static/css/main.15f92823.css.map",
+    "main.7797ffa0.js.map": "/Heart-Guard-Dashboard/static/js/main.7797ffa0.js.map",
+    "787.fb5b094a.chunk.js.map": "/Heart-Guard-Dashboard/static/js/787.fb5b094a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15f92823.css",
+    "static/js/main.7797ffa0.js"
+  ]
+}
