@@ -153,7 +153,7 @@ function Dashboard() {
                     <div className="status-chip-high">High BP</div>
                   </div>
                 </td>
-                <td>82</td>
+                <td>124</td>
                 <td>
                   <InfoTwoToneIcon />
                 </td>
@@ -175,7 +175,7 @@ function Dashboard() {
                     <div className="status-chip-low">Low BP</div>
                   </div>
                 </td>
-                <td>82</td>
+                <td>57</td>
                 <td>
                   <InfoTwoToneIcon />
                 </td>
@@ -197,7 +197,7 @@ function Dashboard() {
                     <div className="status-chip-normal">Normal</div>
                   </div>
                 </td>
-                <td>82</td>
+                <td>84</td>
                 <td>
                   <InfoTwoToneIcon />
                 </td>
