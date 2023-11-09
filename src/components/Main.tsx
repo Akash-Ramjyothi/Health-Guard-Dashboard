@@ -38,7 +38,7 @@ function Main() {
       </header> */}
       <div className="product-title">
         <img src={healthGuardLogo} width="100px" height="100px" alt="Logo" />
-        <div className="product-text">Health Guard</div>
+        <div className="product-text">Heart Guard</div>
       </div>
       <div className="login-container">
         <div className="login-banner">
