@@ -1,22 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Dashboard.css";
 import InfoTwoToneIcon from "@mui/icons-material/InfoTwoTone";
 import PersonIcon from "@mui/icons-material/Person";
-import { error } from "console";
 import { initializeApp } from "firebase/app";
-import {
-  getDatabase,
-  ref,
-  get,
-  set,
-  child,
-  update,
-  remove,
-  push,
-  onValue,
-} from "firebase/database";
-import { unsubscribe } from "diagnostics_channel";
+import { getDatabase, ref, onValue } from "firebase/database";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -133,7 +121,9 @@ function Dashboard() {
                 </td>
                 <td>{realtimeDatabaseData}</td>
                 <td>
-                  <InfoTwoToneIcon />
+                  <Link to="/dashboard/Heartrate-Sensor-0">
+                    <InfoTwoToneIcon />
+                  </Link>
                 </td>
               </tr>
               <tr>
