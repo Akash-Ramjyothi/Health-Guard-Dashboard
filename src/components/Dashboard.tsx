@@ -94,6 +94,7 @@ function Dashboard() {
                     <img
                       src="https://avatars.githubusercontent.com/u/54114888?v=4"
                       className="image--cover"
+                      alt="Health Guard Logo"
                     />
                     <div>Akash Ramjyothi</div>
                   </div>
@@ -103,7 +104,7 @@ function Dashboard() {
                 <td>
                   <div className="chips">
                     {realtimeDatabaseData !== null ? (
-                      realtimeDatabaseData == 0 ? (
+                      realtimeDatabaseData === 0 ? (
                         <div className="status-chip-disconnected">
                           Disconnected
                         </div>
@@ -132,6 +133,7 @@ function Dashboard() {
                     <img
                       src="https://media.licdn.com/dms/image/D5603AQENMbqcYYVEXQ/profile-displayphoto-shrink_800_800/0/1688925595055?e=2147483647&v=beta&t=gmQHwtcHrRL6VXO7ekbAwznXKnAqIFGhAM7a-bfcumY"
                       className="image--cover"
+                      alt="Health Guard Logo"
                     />
                     <div>Raj Shukla</div>
                   </div>
@@ -154,6 +156,7 @@ function Dashboard() {
                     <img
                       src="https://media.licdn.com/dms/image/C5603AQEScHpTbc7SKQ/profile-displayphoto-shrink_800_800/0/1653956825675?e=2147483647&v=beta&t=s1kgm0boF5AnvI_l9oHTm4g0dKeBO1AyyrSF2gpmX98"
                       className="image--cover"
+                      alt="Health Guard Logo"
                     />
                     <div>Pinak Bakshi</div>
                   </div>
@@ -176,6 +179,7 @@ function Dashboard() {
                     <img
                       src="https://media.licdn.com/dms/image/D5603AQGWklpV8-Gz9g/profile-displayphoto-shrink_800_800/0/1672944339565?e=2147483647&v=beta&t=8pEJ8NfA38RRr2_VhBC66l6CxkuZmqatonXSOswau_w"
                       className="image--cover"
+                      alt="Health Guard Logo"
                     />
                     <div>Jash Gandhi</div>
                   </div>

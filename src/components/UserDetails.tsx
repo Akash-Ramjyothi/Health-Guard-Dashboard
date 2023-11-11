@@ -95,6 +95,7 @@ function UserDetails() {
               <img
                 src="https://avatars.githubusercontent.com/u/54114888?v=4"
                 className="user-image"
+                alt="Health Guard Logo"
               />
             </div>
           </div>
