@@ -90,14 +90,22 @@ function UserDetails() {
           </div>
         </div>
         <div className="cards-wrapper">
-          <div className="user-details-card">
-            <div className="image-wrapper">
-              <img
-                src="https://avatars.githubusercontent.com/u/54114888?v=4"
-                className="user-image"
-                alt="Health Guard Logo"
-              />
+          <div className="row-one-wrapper">
+            <div className="user-details-card">
+              <div className="image-wrapper">
+                <img
+                  src="https://avatars.githubusercontent.com/u/54114888?v=4"
+                  className="user-image"
+                  alt="Health Guard Logo"
+                />
+              </div>
+              <div className="divider"></div>
             </div>
+            <div className="heart-rate-card"></div>
+          </div>
+          <div className="row-two-wrapper">
+            <div className="graph-chart-card"></div>
+            <div className="dispatch-help-card"></div>
           </div>
         </div>
       </div>
