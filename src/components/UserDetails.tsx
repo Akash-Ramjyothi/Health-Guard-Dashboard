@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./UserDetails.css";
 import { initializeApp } from "firebase/app";
 import { getDatabase, onValue, push, ref } from "firebase/database";
+import healthGuardLogo from "./safety.png";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -51,7 +52,7 @@ function UserDetails() {
 
           // For each loop to iterate over lastChild object
           lastChildValues.forEach((value: any) => {
-            heartRateList.push(value.heartRate);
+            heartRateList.push(value.heartRate); // Update Array list for Graph
           });
 
           console.log("heartRateList: ", heartRateList);
@@ -78,7 +79,29 @@ function UserDetails() {
   }, []);
 
   console.log("realtimeDatabaseData: ", realtimeDatabaseData);
-  return <div className="App">Hello</div>;
+  return (
+    <div className="App">
+      <div className="parent-container">
+        <div className="company-banner">
+          <div className="product-wrapper">
+            <img src={healthGuardLogo} width="50vh" height="50vh" alt="Logo" />
+            <div className="company-text">Heart Guard Dashboard</div>
+            <div className="user-details-text"> - User Details</div>
+          </div>
+        </div>
+        <div className="cards-wrapper">
+          <div className="user-details-card">
+            <div className="image-wrapper">
+              <img
+                src="https://avatars.githubusercontent.com/u/54114888?v=4"
+                className="user-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default UserDetails;
