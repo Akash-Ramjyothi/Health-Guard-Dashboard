@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Login.css";
 import healthGuardLogo from "./safety.png";
 import { Button, IconButton, InputAdornment, TextField } from "@mui/material";
@@ -9,11 +9,11 @@ import {
   VisibilityOff,
   Lock,
 } from "@mui/icons-material";
-import { Route, Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-interface PasswordInputProps {
-  label: string;
-}
+// interface PasswordInputProps {
+//   label: string;
+// }
 
 function Main() {
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./UserDetails.css";
 import { initializeApp } from "firebase/app";
-import { getDatabase, onValue, push, ref } from "firebase/database";
+import { getDatabase, onValue, ref } from "firebase/database";
 import healthGuardLogo from "./safety.png";
 
 // Firebase configuration
