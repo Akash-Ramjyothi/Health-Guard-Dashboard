@@ -89,6 +89,7 @@
 
 .heart-rate-card {
   display: flex;
+  flex-direction: column;
   background-color: #f0ffff;
   height: 100%;
   width: 30%;
@@ -116,4 +117,46 @@
   margin-top: 2vw;
   margin-bottom: 2vh;
   margin-right: 2vh;
+}
+
+.user-info-wrapper {
+  background-color: #96e4b0;
+  /* background-color: #f0ffff; */
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-self: center;
+  margin-left: 2vh;
+  margin-right: 2vh;
+}
+
+.attribute {
+  color: #636363;
+  font-size: 1rem;
+}
+
+.value {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.user-info-table {
+  width: 100%;
+  min-height: 100%;
+}
+
+.user-location-text {
+  color: #08338f;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 1vh;
+  margin-top: 0.4vh;
+}
+
+.gps-container {
+  width: 94%;
+  height: 88%;
+  margin-top: 0.4vh;
+  align-self: center;
+  background-color: #0bda51;
 }

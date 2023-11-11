@@ -100,8 +100,95 @@ function UserDetails() {
                 />
               </div>
               <div className="divider"></div>
+              <div className="user-info-wrapper">
+                <table className="user-info-table">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div className="user-attribute">
+                          <div className="attribute">First Name</div>
+                          <div className="value"> Akash</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div className="user-attribute">
+                          <div className="attribute">Last Name</div>
+                          <div className="value"> Ram</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div className="user-attribute">
+                          <div className="attribute">Age</div>
+                          <div className="value"> 21</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div className="user-attribute">
+                          <div className="attribute">Gender</div>
+                          <div className="value"> Male</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div className="user-attribute">
+                          <div className="attribute">Weight</div>
+                          <div className="value"> 92 kg</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div className="user-attribute">
+                          <div className="attribute">Last Checkup</div>
+                          <div className="value"> 15-11-2023</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div className="user-attribute">
+                          <div className="attribute">Phone No.</div>
+                          <div className="value"> +91 8939928002</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div className="user-attribute">
+                          <div className="attribute">Emergency No.</div>
+                          <div className="value"> +91 8072137235</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div className="user-attribute">
+                          <div className="attribute">User ID</div>
+                          <div className="value"> #144</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div className="user-attribute">
+                          <div className="attribute">Blood Group</div>
+                          <div className="value"> AB +ve</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div className="user-attribute">
+                          <div className="attribute">Insurance ID</div>
+                          <div className="value"> #RA2011</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div className="user-attribute">
+                          <div className="attribute">Assinged Doctor</div>
+                          <div className="value"> Dr. Raj Shukla</div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div className="heart-rate-card"></div>
+            <div className="heart-rate-card">
+              <div className="user-location-text">User Location</div>
+              <div className="gps-container"></div>
+            </div>
           </div>
           <div className="row-two-wrapper">
             <div className="graph-chart-card"></div>
