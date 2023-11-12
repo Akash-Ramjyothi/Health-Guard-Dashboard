@@ -64,8 +64,8 @@
 }
 
 .user-image {
-  width: 10vh;
-  height: 10vh;
+  width: 150%;
+  height: 50%;
   border-radius: 50%;
   object-fit: cover;
   object-position: center right;
@@ -75,8 +75,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 2vh;
-  margin-right: 2vh;
+  margin-left: 4vh;
+  margin-right: 4vh;
 }
 
 .divider {
@@ -120,8 +120,7 @@
 }
 
 .user-info-wrapper {
-  background-color: #96e4b0;
-  /* background-color: #f0ffff; */
+  background-color: #f0ffff;
   width: 100%;
   height: 90%;
   display: flex;
@@ -130,19 +129,34 @@
   margin-right: 2vh;
 }
 
+.user-attribute {
+  border: none;
+}
+
+tr {
+  border: none;
+}
+
 .attribute {
   color: #636363;
-  font-size: 100%;
+  font-size: 90%;
+  border: none;
 }
 
 .value {
   color: black;
-  font-size: 140%;
+  font-size: 120%;
+  border: none;
 }
 
 .user-info-table {
+  border-collapse: collapse;
   width: 100%;
   height: 100%;
+}
+
+td {
+  border: none;
 }
 
 .user-location-text {
