@@ -155,7 +155,7 @@ tr {
   height: 100%;
 }
 
-td {
+.user-info-table td {
   border: none;
 }
 
