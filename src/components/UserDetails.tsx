@@ -3,6 +3,7 @@ import "./UserDetails.css";
 import { initializeApp } from "firebase/app";
 import { getDatabase, onValue, ref } from "firebase/database";
 import healthGuardLogo from "./safety.png";
+import { Alert, Button, Snackbar } from "@mui/material";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -32,6 +33,13 @@ let heartRateList: any[] = [];
 function UserDetails() {
   // State to store the data from the Realtime Database
   let [realtimeDatabaseData, setRealtimeDatabaseData] = useState(null);
+
+  // State for Snackbar open/close
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+
+  // State to track whether the "Dispatch Medic" button is clicked
+  const [dispatchButtonClicked, setDispatchButtonClicked] = useState(false);
+
   // Function to subscribe to real-time updates
   useEffect(() => {
     // Set up a listener for changes in the database
@@ -77,6 +85,20 @@ function UserDetails() {
       }
     });
   }, []);
+
+  // Function to handle the "Dispatch Help" button click
+  const handleDispatchMedic = () => {
+    // Set Snackbar to open
+    setSnackbarOpen(true);
+
+    // Set helpButtonClicked to true
+    setDispatchButtonClicked(true);
+  };
+
+  // Function to close the Snackbar
+  const handleCloseSnackbar = () => {
+    setSnackbarOpen(false);
+  };
 
   console.log("realtimeDatabaseData: ", realtimeDatabaseData);
   return (
@@ -187,7 +209,59 @@ function UserDetails() {
             </div>
             <div className="heart-rate-card">
               <div className="user-location-text">User Location</div>
-              <div className="gps-container"></div>
+              {/*  If helpButtonClicked state is fale (Conditional Rendering) */}
+              {dispatchButtonClicked ? (
+                <div className="medic-dispatched-container">
+                  <iframe
+                    className="ambulance-lottie"
+                    src="https://lottie.host/?file=1cc71fb7-e0b2-4d15-9200-110d0459eedb/PVUnduxKWh.json"
+                  ></iframe>
+                  <div className="medic-dispatched-text">
+                    Medic Unit Dispatched
+                  </div>
+                </div>
+              ) : (
+                <div className="gps-container">
+                  <iframe
+                    className="maps-embeded"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d817.8360426975835!2d80.04179080814296!3d12.823507682393164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f70d55bee9e3%3A0x397c41fcb9ee02f6!2sUniversity%20Building!5e0!3m2!1sen!2sin!4v1699780289490!5m2!1sen!2sin"
+                    allowFullScreen={false}
+                    loading="lazy"
+                  ></iframe>
+                  <Button
+                    variant="contained"
+                    sx={{
+                      width: "40%",
+                      height: "14%",
+                      borderRadius: 2,
+                      fontWeight: "bold",
+                      backgroundColor: "red",
+                    }}
+                    onClick={handleDispatchMedic}
+                  >
+                    Dispatch Medic
+                  </Button>
+                </div>
+              )}
+              {/* Snackbar to show alert message */}
+              <Snackbar
+                open={snackbarOpen}
+                autoHideDuration={3000} // Adjust the duration as needed
+                onClose={handleCloseSnackbar}
+                anchorOrigin={{ vertical: "top", horizontal: "right" }}
+              >
+                <Alert
+                  onClose={handleCloseSnackbar}
+                  severity="error"
+                  variant="filled"
+                  elevation={6}
+                  sx={{
+                    fontSize: 16,
+                  }}
+                >
+                  Medical Unit dispatched to User's location
+                </Alert>
+              </Snackbar>
             </div>
           </div>
           <div className="row-two-wrapper">
