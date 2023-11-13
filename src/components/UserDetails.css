@@ -111,8 +111,10 @@
 
 .dispatch-help-card {
   display: flex;
+  flex-direction: column;
   background-color: #f0ffff;
   width: 30%;
+  height: 90%;
   border-radius: 15px;
   margin-top: 2vw;
   margin-bottom: 2vh;
@@ -160,6 +162,14 @@ tr {
 }
 
 .user-location-text {
+  color: #08338f;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 1vh;
+  margin-top: 0.4vh;
+}
+
+.realtime-heartrate-text {
   color: #08338f;
   font-weight: bold;
   text-align: left;
@@ -220,4 +230,106 @@ tr {
   color: purple;
   font-weight: bold;
   font-size: 140%;
+}
+
+.heartrate-container {
+  display: flex;
+  flex-direction: column;
+  width: 94%;
+  height: 88%;
+  margin-top: 0.4vh;
+  align-self: center;
+  margin-bottom: 1vh;
+}
+
+.low-bp-container {
+  width: 100%;
+  height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.status-text {
+  color: #636363;
+  font-weight: bold;
+  font-size: 90%;
+}
+
+.status-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.heartrate-value-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.low-status-chip {
+  width: max-content;
+  height: fit-content;
+  font-size: 90%;
+  font-weight: bold;
+  color: #08338f;
+  background-color: #89cff0;
+  border: #08338f 2px solid;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+/* .low-bp-anim {
+  align-self: center;
+  justify-self: center;
+} */
+
+.low-bp-anim img {
+  width: 220px;
+  height: 136px;
+  object-fit: fill;
+}
+
+.heartrate-info-section {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+}
+
+.heart-rate-value {
+  color: black;
+  width: max-content;
+  height: fit-content;
+  background-color: #c0c0c0;
+  font-size: 150%;
+  font-weight: bold;
+  border-radius: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.bpm-wrapper {
+  display: flex;
+}
+
+.low-bp-anim {
+  align-self: center;
+}
+
+.bpm-text {
+  color: #636363;
+  font-weight: bold;
+  font-size: 100%;
+  align-self: flex-end;
+  margin-left: 10%;
 }

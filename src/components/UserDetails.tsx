@@ -32,7 +32,9 @@ let heartRateList: any[] = [];
 
 function UserDetails() {
   // State to store the data from the Realtime Database
-  let [realtimeDatabaseData, setRealtimeDatabaseData] = useState(null);
+  let [realtimeDatabaseData, setRealtimeDatabaseData] = useState<number | null>(
+    null
+  );
 
   // State for Snackbar open/close
   const [snackbarOpen, setSnackbarOpen] = useState(false);
@@ -266,7 +268,46 @@ function UserDetails() {
           </div>
           <div className="row-two-wrapper">
             <div className="graph-chart-card"></div>
-            <div className="dispatch-help-card"></div>
+            <div className="dispatch-help-card">
+              <div className="realtime-heartrate-text">Real-Time Heartrate</div>
+              <div className="heartrate-container">
+                {(() => {
+                  if (realtimeDatabaseData != null) {
+                    if (realtimeDatabaseData < 60) {
+                      return (
+                        <div className="low-bp-container">
+                          <div className="low-bp-anim">
+                            <img src="https://bafkreicu2y5bzaz2kmjbe6hjzddjqy2dzoalibwzkp7jcx5xdsl23dzmyu.ipfs.nftstorage.link/" />
+                          </div>
+                          <div className="heartrate-info-section">
+                            <div className="status-wrapper">
+                              <div className="status-text">Status</div>
+                              <div className="low-status-chip">Low BP</div>
+                            </div>
+                            <div className="heartrate-value-wrapper">
+                              <div className="status-text">Heartrate</div>
+                              <div className="bpm-wrapper">
+                                <div className="heart-rate-value">
+                                  {realtimeDatabaseData}
+                                </div>
+                                <div className="bpm-text">bpm</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    } else if (
+                      realtimeDatabaseData >= 60 &&
+                      realtimeDatabaseData <= 100
+                    ) {
+                      return <div>Normal BP</div>;
+                    } else {
+                      return <div>High BP</div>;
+                    }
+                  }
+                })()}
+              </div>
+            </div>
           </div>
         </div>
       </div>
