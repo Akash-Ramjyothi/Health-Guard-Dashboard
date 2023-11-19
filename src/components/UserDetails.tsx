@@ -277,13 +277,9 @@ function UserDetails() {
                       return (
                         <div className="low-bp-container">
                           <div className="low-bp-anim">
-                            <img src="https://bafkreicu2y5bzaz2kmjbe6hjzddjqy2dzoalibwzkp7jcx5xdsl23dzmyu.ipfs.nftstorage.link/" />
+                            <img src="https://github.com/Akash-Ramjyothi/Leak-Master-App/assets/54114888/183ca62e-a906-4a07-9f51-f130743b415b" />
                           </div>
                           <div className="heartrate-info-section">
-                            <div className="status-wrapper">
-                              <div className="status-text">Status</div>
-                              <div className="low-status-chip">Low BP</div>
-                            </div>
                             <div className="heartrate-value-wrapper">
                               <div className="status-text">Heartrate</div>
                               <div className="bpm-wrapper">
@@ -293,6 +289,10 @@ function UserDetails() {
                                 <div className="bpm-text">bpm</div>
                               </div>
                             </div>
+                            <div className="status-wrapper">
+                              <div className="status-text">Status</div>
+                              <div className="low-status-chip">Low BP</div>
+                            </div>
                           </div>
                         </div>
                       );
@@ -300,9 +300,53 @@ function UserDetails() {
                       realtimeDatabaseData >= 60 &&
                       realtimeDatabaseData <= 100
                     ) {
-                      return <div>Normal BP</div>;
+                      return (
+                        <div className="low-bp-container">
+                          <div className="low-bp-anim">
+                            <img src="https://github.com/Akash-Ramjyothi/Leak-Master-App/assets/54114888/bd683396-b096-4ffe-9984-e8c69d4f7e68" />
+                          </div>
+                          <div className="heartrate-info-section">
+                            <div className="heartrate-value-wrapper">
+                              <div className="status-text">Heartrate</div>
+                              <div className="bpm-wrapper">
+                                <div className="heart-rate-value">
+                                  {realtimeDatabaseData}
+                                </div>
+                                <div className="bpm-text">bpm</div>
+                              </div>
+                            </div>
+                            <div className="status-wrapper">
+                              <div className="status-text">Status</div>
+                              <div className="normal-status-chip">
+                                Normal BP
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      );
                     } else {
-                      return <div>High BP</div>;
+                      return (
+                        <div className="low-bp-container">
+                          <div className="low-bp-anim">
+                            <img src="https://github.com/Akash-Ramjyothi/Leak-Master-App/assets/54114888/d56dcb98-6384-4dea-b5f2-2b16f15246bf" />
+                          </div>
+                          <div className="heartrate-info-section">
+                            <div className="heartrate-value-wrapper">
+                              <div className="status-text">Heartrate</div>
+                              <div className="bpm-wrapper">
+                                <div className="heart-rate-value">
+                                  {realtimeDatabaseData}
+                                </div>
+                                <div className="bpm-text">bpm</div>
+                              </div>
+                            </div>
+                            <div className="status-wrapper">
+                              <div className="status-text">Status</div>
+                              <div className="high-status-chip">High BP</div>
+                            </div>
+                          </div>
+                        </div>
+                      );
                     }
                   }
                 })()}
