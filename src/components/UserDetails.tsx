@@ -259,6 +259,7 @@ function UserDetails() {
               {dispatchButtonClicked ? (
                 <div className="medic-dispatched-container">
                   <iframe
+                    title="Ambulance Animation"
                     className="ambulance-lottie"
                     src="https://lottie.host/?file=1cc71fb7-e0b2-4d15-9200-110d0459eedb/PVUnduxKWh.json"
                   ></iframe>
@@ -269,6 +270,7 @@ function UserDetails() {
               ) : (
                 <div className="gps-container">
                   <iframe
+                    title="Google Maps"
                     className="maps-embeded"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d817.8360426975835!2d80.04179080814296!3d12.823507682393164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f70d55bee9e3%3A0x397c41fcb9ee02f6!2sUniversity%20Building!5e0!3m2!1sen!2sin!4v1699780289490!5m2!1sen!2sin"
                     allowFullScreen={false}
@@ -339,7 +341,10 @@ function UserDetails() {
                       return (
                         <div className="low-bp-container">
                           <div className="low-bp-anim">
-                            <img src="https://github.com/Akash-Ramjyothi/Leak-Master-App/assets/54114888/183ca62e-a906-4a07-9f51-f130743b415b" />
+                            <img
+                              src="https://github.com/Akash-Ramjyothi/Leak-Master-App/assets/54114888/183ca62e-a906-4a07-9f51-f130743b415b"
+                              alt=""
+                            />
                           </div>
                           <div className="heartrate-info-section">
                             <div className="heartrate-value-wrapper">
@@ -365,7 +370,10 @@ function UserDetails() {
                       return (
                         <div className="low-bp-container">
                           <div className="low-bp-anim">
-                            <img src="https://github.com/Akash-Ramjyothi/Leak-Master-App/assets/54114888/bd683396-b096-4ffe-9984-e8c69d4f7e68" />
+                            <img
+                              src="https://github.com/Akash-Ramjyothi/Leak-Master-App/assets/54114888/bd683396-b096-4ffe-9984-e8c69d4f7e68"
+                              alt=""
+                            />
                           </div>
                           <div className="heartrate-info-section">
                             <div className="heartrate-value-wrapper">
@@ -390,7 +398,10 @@ function UserDetails() {
                       return (
                         <div className="low-bp-container">
                           <div className="low-bp-anim">
-                            <img src="https://github.com/Akash-Ramjyothi/Leak-Master-App/assets/54114888/d56dcb98-6384-4dea-b5f2-2b16f15246bf" />
+                            <img
+                              src="https://github.com/Akash-Ramjyothi/Leak-Master-App/assets/54114888/d56dcb98-6384-4dea-b5f2-2b16f15246bf"
+                              alt=""
+                            />
                           </div>
                           <div className="heartrate-info-section">
                             <div className="heartrate-value-wrapper">
