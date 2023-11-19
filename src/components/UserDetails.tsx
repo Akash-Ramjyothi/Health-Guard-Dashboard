@@ -4,6 +4,7 @@ import { initializeApp } from "firebase/app";
 import { getDatabase, onValue, ref } from "firebase/database";
 import healthGuardLogo from "./safety.png";
 import { Alert, Button, Snackbar } from "@mui/material";
+import Chart from "react-apexcharts";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -29,6 +30,25 @@ const dbRef = ref(db, "Heartrate-Sensor-0/");
 
 // Array list to store heartRate values
 let heartRateList: any[] = [];
+let timeStampList: any[] = [];
+
+// // Data to be pushed for Graph Chart
+// let state = {
+//   options: {
+//     chart: {
+//       id: "basic-bar",
+//     },
+//     xaxis: {
+//       categories: timeStampList,
+//     },
+//   },
+//   series: [
+//     {
+//       name: "series-1",
+//       data: heartRateList,
+//     },
+//   ],
+// };
 
 function UserDetails() {
   // State to store the data from the Realtime Database
@@ -62,10 +82,15 @@ function UserDetails() {
 
           // For each loop to iterate over lastChild object
           lastChildValues.forEach((value: any) => {
+            // Y Axis
             heartRateList.push(value.heartRate); // Update Array list for Graph
+
+            // Y Axis
+            timeStampList.push(value.timeStamp); // Update Array list for Graph
           });
 
           console.log("heartRateList: ", heartRateList);
+          console.log("timeStampList: ", timeStampList);
 
           const lastChildKeys = Object.keys(lastChild); // Get an array of keys from the lastChild object
 
@@ -102,7 +127,26 @@ function UserDetails() {
     setSnackbarOpen(false);
   };
 
+  // Data to be pushed for Graph Chart
+  let state = {
+    options: {
+      chart: {
+        id: "basic-bar",
+      },
+      xaxis: {
+        categories: timeStampList,
+      },
+    },
+    series: [
+      {
+        name: "series-1",
+        data: heartRateList,
+      },
+    ],
+  };
+
   console.log("realtimeDatabaseData: ", realtimeDatabaseData);
+  heartRateList = heartRateList.slice(0, Math.ceil(heartRateList.length / 2));
   return (
     <div className="App">
       <div className="parent-container">
@@ -267,7 +311,25 @@ function UserDetails() {
             </div>
           </div>
           <div className="row-two-wrapper">
-            <div className="graph-chart-card"></div>
+            <div className="graph-chart-card">
+              <div className="realtime-heartrate-text">Statistical Data</div>
+              <div className="graphchart-container">
+                <Chart
+                  options={state.options}
+                  series={state.series}
+                  type="area"
+                  height="200"
+                  width="1000"
+                />
+                <Chart
+                  options={state.options}
+                  series={state.series}
+                  type="radar"
+                  height="200"
+                  width="500"
+                />
+              </div>
+            </div>
             <div className="dispatch-help-card">
               <div className="realtime-heartrate-text">Real-Time Heartrate</div>
               <div className="heartrate-container">
